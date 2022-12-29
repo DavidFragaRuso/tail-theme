@@ -1,0 +1,34 @@
+{
+  "name": "tail-theme",
+  "version": "1.0.0",
+  "description": "Wordpress theme with Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "prod": "npm run production",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidFragaRuso/tail-theme.git"
+  },
+  "author": "David Fraga",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/DavidFragaRuso/tail-theme/issues"
+  },
+  "homepage": "https://github.com/DavidFragaRuso/tail-theme#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.49",
+    "sass": "^1.57.1",
+    "sass-loader": "^12.1.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

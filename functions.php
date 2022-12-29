@@ -131,6 +131,43 @@ function dfrwp_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Col Left', 'dfrwp' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		) 
+	);
+	register_sidebar( array(
+        'name'          => esc_html__( 'Footer Col Center 1', 'dfrwp' ),
+        'id'            => 'sidebar-3',
+        'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+	register_sidebar( array(
+        'name'          => esc_html__( 'Footer Col Center 2', 'dfrwp' ),
+        'id'            => 'sidebar-4',
+        'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+	register_sidebar( array(
+        'name'          => esc_html__( 'Footer Col Right', 'dfrwp' ),
+        'id'            => 'sidebar-5',
+        'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
 }
 add_action( 'widgets_init', 'dfrwp_widgets_init' );
 
