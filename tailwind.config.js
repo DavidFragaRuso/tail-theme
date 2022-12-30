@@ -27,7 +27,17 @@ module.exports = {
     './template-parts/**/*.php',
     './template-parts/*.php',
     './src/**/*.sass',
-    './*.php', 
+    './404.php',
+    './archive.php',
+    './comments.php',
+    './footer.php',
+    './front-page.php',
+    './header.php',
+    './index.php',
+    './page.php',
+    './search.php',
+    './sidebar.php',
+    './single.php', 
   ],
   theme: {
     container: {
