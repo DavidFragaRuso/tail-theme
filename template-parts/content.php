@@ -10,28 +10,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
+	<?php  
+	if ( has_post_thumbnail() ) {
+		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+		//var_dump($thumb);
+		if ( ! empty( $thumb[0] ) ) {
+			//echo get_the_post_thumbnail( $post->ID, 'full', array( 'class' => 'post-thumbnail' ) );
 			?>
-			<div class="entry-meta">
-				<?php
-				dfrwp_posted_on();
-				dfrwp_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php dfrwp_post_thumbnail(); ?>
-
-	<div class="entry-content">
+			<div class="relative w-full -mt-14 z-20"><img class="post-thumbnail w-8/12 mx-auto rounded-lg shadow-md" alt="<?php the_title(); ?>" src="<?php echo $thumb[0] ?>" decoding="async" /></div>
+			<?php 
+		}
+		//the_post_thumbnail('full');
+	}else{
+		?><div class="relative w-full -mt-14 z-20"><img class="post-thumbnail w-8/12 mx-auto rounded-lg shadow-md" width="900px" height="650px" alt="" decoding="async" src="<?php echo get_template_directory_uri(); ?>/public/imgs/dummy.jpg" /></div><?php
+	}
+	
+	?>
+	<div class="entry-content bg-white border-[1px] border-gray px-4 pt-20 pb-8 -mt-14 mx-2 md:mx-0 rounded-lg shadow-md">
 		<?php
 		the_content(
 			sprintf(
@@ -57,7 +52,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php dfrwp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<!--<footer class="entry-footer border-[1px] border-gray px-4 py-8 rounded-lg shadow-md">
+		<?php //dfrwp_entry_footer(); ?>
+	</footer>-->
 </article><!-- #post-<?php the_ID(); ?> -->

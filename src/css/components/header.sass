@@ -1,9 +1,11 @@
+#wpadminbar
+    position: fixed!important 
 .custom-logo
     @apply block h-[30px] w-auto mr-2
 
 .has-fixed
     position: fixed!important
-    margin-top: 0!important
+    /*margin-top: 0px!important*/
 
 .menu 
     @apply px-2 md:px-0 py-2 md:py-0 hidden md:block md:w-auto md:flex md:flex-row list-none p-0
@@ -17,5 +19,5 @@
 .menu-item
     @apply py-2 md:py-0 md:px-3
 
-//.menu-item a
-    //@apply block text-center text-white font-bold
+.menu-item a
+    @apply block text-white font-display hover:no-underline

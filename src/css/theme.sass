@@ -16,16 +16,28 @@
 
 @import "./components/header"
 @import "./components/pagination"
+@import "./components/animations"
+@import "./components/post_filter"
+@import "./components/single"
+@import "./components/comments"
+@import "./components/sidebar"
+
+@font-face
+    font-family: "DM Sans",
+    src: url(./public/fonts/DMSans-Regular.ttf)
+@font-face
+    font-family: "DM Sans Bold",
+    src: url(./public/fonts/DMSans-Bold.ttf)
 
 @layer base
 
     body
-        @apply text-base
+        @apply text-base font-body
 
     h1 
-        @apply text-2xl font-semibold mb-4 mt-8
+        @apply text-2xl leading-9 tracking-tight mb-4 mt-8
     h2 
-        @apply text-xl font-semibold mb-4 mt-8
+        @apply text-xl leading-7 tracking-tighter mb-4 mt-8
     h3 
         @apply text-lg
     h3 
@@ -37,13 +49,16 @@
     h4,
     h5,
     h6
-    
+        @apply font-display
+         
     
     p
         @apply mb-4
 
     ul
         @apply list-disc pl-8 mb-4
+    ol
+        @apply list-decimal pl-8 mb-4
     
     a
         @apply text-primary

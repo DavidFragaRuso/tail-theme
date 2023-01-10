@@ -122,12 +122,12 @@ add_action( 'after_setup_theme', 'dfrwp_content_width', 0 );
 function dfrwp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'dfrwp' ),
+			'name'          => esc_html__( 'Main Sidebar', 'dfrwp' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget border-[1px] py-2 px-4 rounded-md mb-8 %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_title'  => '<h2 class="widget-title mt-0">',
 			'after_title'   => '</h2>',
 		)
 	);
@@ -214,4 +214,9 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Post filter functions.
+ */
+require get_template_directory() . '/inc/post_filter.php';
 

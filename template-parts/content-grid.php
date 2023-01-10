@@ -6,8 +6,8 @@
  */
 
 ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class( 'block border-[1px] rounded-lg overflow-hidden border-gray-200 shadow-md mb-8' ); ?>>
-        <a href="<?php //echo the_permalink(); ?>" rel="bookmark">
+    <article id="post-<?php the_ID(); ?>" <?php post_class( 'block border-2 rounded-lg overflow-hidden border-gray-800 shadow-md mb-8 bg-white' ); ?>>
+        <a href="<?php echo the_permalink(); ?>" rel="bookmark">
             <div class="entry-header">
             <?php
 
@@ -23,11 +23,25 @@
         </a>
         <div class="p-4">
             <?php
-
+            $tags = get_the_tags();
+            //var_dump($tags);
+            if ( $tags ):
+            ?>
+            <span>
+                <?php 
+                foreach ( $tags as $tag ){
+                    $tag_link = get_tag_link( $tag->term_id );
+                    //var_dump( $tag_link );
+                    echo '<a class="bg-black px-2 text-white text-xs mr-4 p-1 hover:no-underline hover:bg-primary hover:text-white" href="' . $tag_link . '" rel="tag">' . $tag->name . '</a>'; 
+                }
+                ?>
+            </span>
+            <?php
+            endif;
             //if ( is_singular() ) :
                 //the_title( '<h1 class="entry-title">', '</h1>' );
             //else :
-                the_title( '<h2 class="entry-title leading-7 mt-0"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                the_title( '<h2 class="entry-title mt-4"><a class="hover:no-underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
             //endif;
 
             if ( 'post' === get_post_type() ) :

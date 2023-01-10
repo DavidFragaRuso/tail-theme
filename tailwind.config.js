@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
 const customColors = {
-  primary: {
-    DEFAULT: '#b02ecc'
+  primary: { 
+    DEFAULT: '#2aa7e1'
   },
   secondary: {
-    DEFAULT: '#2e31cc'
+    DEFAULT: '#d12ad4'
   },
   gray: {
     100: '#f5f5f5',
@@ -24,6 +24,7 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
+    './inc/post_filter.php',
     './template-parts/**/*.php',
     './template-parts/*.php',
     './src/**/*.sass',
@@ -47,17 +48,21 @@ module.exports = {
     screens: {
       sm: '480px',
       md: '768px',
-      lg: '992px',
+      lg: '1024px',
       xl: '1440px',
     },
     extend: {
       fontSize: {
-        'xs': '12px',
-        'sm': '14px',
-        'base': '16px',
-        'lg': '18px',
-        'xl': '22px',
-        '2xl': '33px'
+        'xs': '14px',
+        'sm': '16px',
+        'base': '18px',
+        'lg': '22px',
+        'xl': '26px',
+        '2xl': '40px'
+      },
+      fontFamily: {
+        display: [ 'DM Sans Bold', 'sans-serif' ],
+        body: [ 'DM Sans', 'sans-serif' ]
       },
       colors: {
         ...customColors

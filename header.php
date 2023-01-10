@@ -28,7 +28,7 @@
 			<div id="site-branding" class="flex flex-nowrap items-center">
 				<?php 
 				the_custom_logo();
-				?><span class="text-lg"><a  class="text-white font-bold hover:text-gray-300 hover:no-underline" href="<?php echo esc_url( home_url('/') ) ?>"><?php echo bloginfo('name'); ?></a></span><?php
+				?><span class="text-lg"><a  class="text-white text-xl font-display hover:text-gray-300 hover:no-underline" href="<?php echo esc_url( home_url('/') ) ?>"><?php echo bloginfo('name'); ?></a></span><?php
 				?>
 			</div>
 			<button id="toggle-btn"  class="navbar-toggler-icon md:invisible">
