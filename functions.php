@@ -220,3 +220,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/post_filter.php';
 
+/**
+ * Add socials links as theme options
+ */
+require get_template_directory() . '/inc/theme-options.php';
+

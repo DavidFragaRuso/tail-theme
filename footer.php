@@ -12,26 +12,28 @@
 ?>
 
 	<footer id="colophon" class="site-footer bg-gray-900 text-white py-8">
-		<div class="flex flex-wrap">
-			<div class="footer-widget">
-				<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-					<?php dynamic_sidebar( 'sidebar-2' ); ?>
-				<?php endif; ?>
-			</div>
-			<div class="footer-widget">
-				<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
-					<?php dynamic_sidebar( 'sidebar-3' ); ?>
-				<?php endif; ?>	
-			</div>
-			<div class="footer-widget">
-				<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
-					<?php dynamic_sidebar( 'sidebar-4' ); ?>
-				<?php endif; ?>	
-			</div>
-			<div class="footer-widget">
-				<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
-					<?php dynamic_sidebar( 'sidebar-5' ); ?>
-				<?php endif; ?>		
+		<div class="container">
+			<div class="flex flex-wrap">
+				<div class="footer-widget">
+					<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+						<?php dynamic_sidebar( 'sidebar-2' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="footer-widget">
+					<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+						<?php dynamic_sidebar( 'sidebar-3' ); ?>
+					<?php endif; ?>	
+				</div>
+				<div class="footer-widget">
+					<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+						<?php dynamic_sidebar( 'sidebar-4' ); ?>
+					<?php endif; ?>	
+				</div>
+				<div class="footer-widget">
+					<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
+						<?php dynamic_sidebar( 'sidebar-5' ); ?>
+					<?php endif; ?>		
+				</div>
 			</div>
 		</div>	
 	</footer><!-- #colophon -->
