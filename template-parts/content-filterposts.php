@@ -44,8 +44,8 @@
                     </select>
                 </div>
             </div>
-            <button class="bg-black text-white text-sm text-center py-1 px-2 rounded border-2 border-black hover:bg-white hover:text-black inline-block"><?php esc_html_e( 'Apply Filters', 'dfrwp' ); ?></button>
-            <a id="reset_filter_btn" class="bg-black text-white text-sm text-center py-1 px-2 rounded border-2 border-black hover:bg-white hover:text-black inline-block cursor-pointer"><?php esc_html_e( 'Reset Filters', 'dfrwp' ); ?></a>
+            <button class="bg-white text-black text-sm text-center py-1 px-2 rounded border-2 border-white hover:bg-black hover:text-white inline-block"><?php esc_html_e( 'Apply Filters', 'dfrwp' ); ?></button>
+            <a id="reset_filter_btn" class="bg-white text-black text-sm text-center py-1 px-2 rounded border-2 border-white hover:no-underline hover:bg-black hover:text-white inline-block cursor-pointer"><?php esc_html_e( 'Reset Filters', 'dfrwp' ); ?></a>
             <!-- required hidden field for admin-ajax.php -->
             <input type="hidden" name="action" value="postfilter" />
         </form>

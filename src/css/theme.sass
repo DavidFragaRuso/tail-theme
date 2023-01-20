@@ -72,6 +72,9 @@
     textarea
         @apply border-[1px] border-gray-300 rounded-md p-2 text-black
 
+    input[type=submit]
+        @apply bg-black text-white text-center py-1 px-2 rounded border-2 border-black hover:bg-white hover:text-black
+
 @layer components
     
     .btn-primary 
@@ -80,5 +83,5 @@
     .btn-secondary 
         @apply bg-secondary text-white text-center py-1 px-2 rounded border-2 border-secondary hover:bg-primary
 
-.show-element
-    display: block!important
+    .show-element
+        display: block!important
