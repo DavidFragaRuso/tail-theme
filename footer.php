@@ -9,37 +9,38 @@
  * @package Tail_Theme
  */
 
+global $theme_customizer;
+
 ?>
 
-	<footer id="colophon" class="site-footer bg-gray-900 text-white py-8">
-		<div class="container">
-			<div class="flex flex-wrap">
-				<div class="footer-widget">
-					<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-						<?php dynamic_sidebar( 'sidebar-2' ); ?>
-					<?php endif; ?>
-				</div>
-				<div class="footer-widget">
-					<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
-						<?php dynamic_sidebar( 'sidebar-3' ); ?>
-					<?php endif; ?>	
-				</div>
-				<div class="footer-widget">
-					<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
-						<?php dynamic_sidebar( 'sidebar-4' ); ?>
-					<?php endif; ?>	
-				</div>
-				<div class="footer-widget">
-					<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
-						<?php dynamic_sidebar( 'sidebar-5' ); ?>
-					<?php endif; ?>		
-				</div>
-			</div>
-		</div>	
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+			<footer id="colophon" class="site-footer bg-primary text-white py-8">
+				<div class="container">
+					<div class="flex flex-wrap">
+						<div class="footer-widget">
+							<span class="footer-site-title"><?php echo bloginfo('name'); ?></span>
+							<?php $theme_customizer->dfr_render_rrss_links(); ?>
+						</div>
+						<div class="footer-widget">
+							<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+								<?php dynamic_sidebar( 'sidebar-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="footer-widget">
+							<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+								<?php dynamic_sidebar( 'sidebar-3' ); ?>
+							<?php endif; ?>	
+						</div>
+						<div class="footer-widget">
+							<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+								<?php dynamic_sidebar( 'sidebar-4' ); ?>
+							<?php endif; ?>	
+						</div>
+					</div>
+				</div>	
+			</footer><!-- #colophon -->
+		</div><!-- #page -->
 
-<?php wp_footer(); ?>
+		<?php wp_footer(); ?>
 
-</body>
+	</body>
 </html>

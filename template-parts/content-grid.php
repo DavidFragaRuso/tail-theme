@@ -6,7 +6,7 @@
  */
 
 ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class( 'block border-2 rounded-lg overflow-hidden border-gray-200 shadow-md mb-8 bg-white' ); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class( 'block border-1 rounded-lg overflow-hidden border-gray-200 shadow-md mb-8 bg-white' ); ?>>
         <a href="<?php echo the_permalink(); ?>" rel="bookmark">
             <div class="entry-header">
             <?php

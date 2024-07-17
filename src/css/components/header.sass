@@ -7,13 +7,19 @@
     position: fixed!important
     /*margin-top: 0px!important*/
 
-.menu 
-    @apply px-2 md:px-0 py-2 md:py-0 hidden md:block md:w-auto md:flex md:flex-row list-none p-0
+#primary-menu
+    @apply px-2 md:px-0 py-2 md:py-0 hidden md:block md:mb-0 md:w-auto md:flex md:flex-row list-none p-0
     ul
         display: flex
         flex-direction: row
 
-.menu li:last-child
+.menu
+    @apply px-2 md:px-0 py-2 md:py-0 md:block md:w-auto md:flex md:flex-row list-none p-0
+    ul
+        display: flex
+        flex-direction: row
+
+#primary-menu li:last-child
     @apply pr-0
 
 .menu-item

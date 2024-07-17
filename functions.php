@@ -142,7 +142,7 @@ function dfrwp_widgets_init() {
 		) 
 	);
 	register_sidebar( array(
-        'name'          => esc_html__( 'Footer Col Center 1', 'dfrwp' ),
+        'name'          => esc_html__( 'Footer Col Center', 'dfrwp' ),
         'id'            => 'sidebar-3',
         'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -151,17 +151,8 @@ function dfrwp_widgets_init() {
         'after_title'   => '</h3>',
     ) );
 	register_sidebar( array(
-        'name'          => esc_html__( 'Footer Col Center 2', 'dfrwp' ),
-        'id'            => 'sidebar-4',
-        'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
-	register_sidebar( array(
         'name'          => esc_html__( 'Footer Col Right', 'dfrwp' ),
-        'id'            => 'sidebar-5',
+        'id'            => 'sidebar-4',
         'description'   => esc_html__( 'Add widgets here.', 'dfrwp' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
@@ -214,7 +205,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
 /**
  * Post filter functions.
  */
@@ -224,4 +214,21 @@ require get_template_directory() . '/inc/post_filter.php';
  * Add socials links as theme options
  */
 require get_template_directory() . '/inc/theme-options.php';
+$theme_customizer = new DFR_Theme_Customizer;
+
+/**
+ * Register Gutenberg Block with ACF Test
+ */
+/*
+require_once get_template_directory() . '/inc/register-blocks.php';
+
+use TailTheme\RegisterACF\RegisterBasicBlocks;
+
+function register_custom_blocks() {
+    $registerBlocks = new RegisterBasicBlocks();
+
+	$registerBlocks->register_article();
+}
+add_action('init', 'register_custom_blocks');
+*/
 

@@ -2,10 +2,10 @@
 
 const customColors = {
   primary: { 
-    DEFAULT: '#2aa7e1'
+    DEFAULT: '#487AD6'
   },
   secondary: {
-    DEFAULT: '#d12ad4'
+    DEFAULT: '#8A38F2'
   },
   gray: {
     100: '#f5f5f5',
@@ -49,7 +49,7 @@ module.exports = {
       sm: '480px',
       md: '768px',
       lg: '1024px',
-      xl: '1440px',
+      xl: '1200px',
     },
     extend: {
       fontSize: {
@@ -80,7 +80,7 @@ module.exports = {
         "-10": "-10"
       },
       textShadow: {
-        DEFAULT: '1px 1px 1px rgba(0, 0, 0, 1)'
+        DEFAULT: '1px 1px 3px rgba(0, 0, 0, .7)'
       }
     },
   },

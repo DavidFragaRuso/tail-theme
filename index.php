@@ -19,11 +19,15 @@ get_header();
 		<?php 
 		if ( is_front_page() ):
 			?>
-			<div class="marquee border-black border-[1px] shadow-md bg-gradient-to-l from-primary to-secondary text-white mb-8">
-				<div class="py-12 bg-gradient-to-t from-black">
+			<!--<div class="marquee border-black border-[1px] shadow-md bg-gradient-to-l from-primary to-secondary text-white mb-8">-->
+			<div class="marquee shadow-md bg-gray-400 mb-4 lg:mb-8">
+				<!--<div class="py-12 bg-gradient-to-t from-black">-->
+				<div class="py-8">
 					<div class="container">
-						<h1 class="text-white uppercase text-shadow mt-0"><?php bloginfo('name'); ?></h1>
-						<span class="text-white text-xl text-shadow"><?php bloginfo('description') ?></span>
+						<!--<h1 class="text-white text-shadow text-xl mt-0"><?php bloginfo('name'); ?></h1>-->
+						<!--<h1 class="text-white text-xl mt-0 mb-2"><?php bloginfo('name'); ?></h1>-->
+						<!--<span class="text-white text-lg text-shadow"><?php bloginfo('description') ?></span>-->
+						<h1 class="text-white text-xl mt-0 mb-0"><?php bloginfo('description') ?></h1>
 					</div>
 				</div>
 			</div>		
@@ -77,7 +81,7 @@ get_header();
 					?>
 				</div>
 			</div>
-			<div class="my-8">
+			<div class="my-8 md:mt-0">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

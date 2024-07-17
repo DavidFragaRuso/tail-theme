@@ -1,5 +1,7 @@
 {
     "/public/js/theme.js": "/public/js/theme.js",
+    "/public/js/customizer.js": "/public/js/customizer.js",
+    "/public/js/navigation.js": "/public/js/navigation.js",
     "/style.css": "/style.css",
     "/public/imgs/dummy.jpg": "/public/imgs/dummy.jpg",
     "/public/imgs/dummy_tmp20620": "/public/imgs/dummy_tmp20620",
